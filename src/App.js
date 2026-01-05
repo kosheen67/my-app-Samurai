@@ -18,8 +18,8 @@ function App() {
         <Nav />
         <div className='app-wrapper-content'>
           <Routes>
-            <Route path='/dialogues/*' element={<Dialogues />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/dialogues/*' element={<Dialogues />} />
             <Route path='/news' element={<News />} />
             <Route path='/music' element={<Music />} />
             <Route path='/settings' element={<Settings />} />

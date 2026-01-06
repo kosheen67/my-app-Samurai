@@ -1,22 +1,15 @@
 import classes from './Dialogues.module.css'
 import DialogueItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
-import { dialogs } from './../../index'
 
 const Dialogues = (props) => {
 
-
-
-    let dialogsElements = props.dialogs.
+    let dialogsElements = props.state.dialogs.
         map((d) => {
             return <DialogueItem name={d.name} id={d.id} />
         })
 
-
-
-
-
-    let messagesElements = props.messages.
+    let messagesElements = props.state.messages.
         map((m) => {
             return <Message message={m.message} />
         })

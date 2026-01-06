@@ -1,17 +1,11 @@
 import classes from './MyPosts.module.css'
 import Post from './Post/Post'
+import posts from './../../Profile/Profile'
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 
-    let posts = [
-        { id: 1, message: 'Hi, how are you?', likesCount: 12 },
-        { id: 2, message: "It's my first post", likesCount: 11 },
-        { id: 3, message: "It's my first post", likesCount: 11 },
-        { id: 4, message: "It's my first post", likesCount: 11 },
-    ]
-
-    let postsElements = posts.
-        map((p) => {
+    let postsElements =
+        props.posts.map((p) => {
             return <Post message={p.message} likesCount={p.likesCount} />
         })
 
